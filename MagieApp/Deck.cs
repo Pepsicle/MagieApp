@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CardValues = MagieApp.CardValues.Values;
 
 namespace MagieApp
 {
@@ -12,6 +13,18 @@ namespace MagieApp
         }
 
         public List<Card> DeckList { get; set; }
+
+        public List<Card> FirstHandout()
+        {
+            List<Card> FirstHandoutList = new List<Card>();
+            var values = Enum.GetValues(typeof(CardValues.Values));
+            foreach (var value in values)
+            {
+                Card card = new Card(value);
+            }
+
+            return FirstHandoutList;
+        }
 
         public List<Card> Shuffle()
         {
