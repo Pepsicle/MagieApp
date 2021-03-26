@@ -7,14 +7,17 @@ namespace MagieApp
 {
     class Card
     {
-        public Card(int value)
+        public Card(object value)
         {
-            CardVal = value;
+            this.Value = value;
             Marked = false;
             ChosenRow = false;
         }
 
         public int CardVal { get; set; }
+
+        private object Value { get; set; }
+
         public bool Marked { get; set; }
         public bool ChosenRow { get; set; }
 

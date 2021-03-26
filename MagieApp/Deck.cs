@@ -7,6 +7,8 @@ namespace MagieApp
 {
     class Deck
     {
+        private Random random;
+
         public Deck(List<Card> cards)
         {
             DeckList = cards;
@@ -21,16 +23,31 @@ namespace MagieApp
             foreach (var value in values)
             {
                 Card card = new Card(value);
+                FirstHandoutList.Add(card);
             }
 
             return FirstHandoutList;
         }
 
-        public List<Card> Shuffle()
+        public List<Card> Shuffle(List<Card> OldList)
         {
-            List<Card> ShuffledList = new List<Card>();
+            random = new Random();
 
-            return ShuffledList;
+            var count = OldList.Count;
+            var last = count - 1;
+            for (var cardnum = 0; cardnum < last; ++cardnum) 
+            {
+                var randomnum = random.Next(cardnum, count);
+                var tmp = OldList[cardnum];
+                OldList[cardnum] = OldList[randomnum];
+                OldList[randomnum] = tmp;
+            }
+
+            OldList.Sort(delegate (Card x, Card y) {
+                return x.Marked.CompareTo(y.Marked);
+            });
+
+            return OldList;
         }
     }
 }
