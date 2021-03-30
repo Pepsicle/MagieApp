@@ -13,8 +13,10 @@ namespace MagieApp
             Rows = new List<Row>();
             for (int i = 0; i < Width; i++)
             {
-                Rows.Add(new Column(Width));
+                Rows.Add(new Row());
             }
+
+            Column = new Column(width);
         }
 
         private int Width { get; set; }

@@ -1,0 +1,4 @@
+C:\Users\pepij\source\repos\MagieApp\MagieApp\obj\Debug\netcoreapp3.1\MagieApp.csprojAssemblyReference.cache
+C:\Users\pepij\source\repos\MagieApp\MagieApp\obj\Debug\netcoreapp3.1\MagieApp.csproj.CoreCompileInputs.cache
+C:\Users\pepij\source\repos\MagieApp\MagieApp\obj\Debug\netcoreapp3.1\MagieApp.AssemblyInfoInputs.cache
+C:\Users\pepij\source\repos\MagieApp\MagieApp\obj\Debug\netcoreapp3.1\MagieApp.AssemblyInfo.cs

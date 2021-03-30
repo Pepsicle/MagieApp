@@ -6,7 +6,7 @@ namespace MagieApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Wld!");
+            Console.WriteLine("Hello World!");
         }
     }
 }

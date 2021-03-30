@@ -7,7 +7,6 @@ namespace MagieApp
     class Column
     {
         public List<Row> Rows { get; private set; }
-        private int width = 4;
 
         public Column(int width)
         {
