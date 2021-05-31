@@ -6,7 +6,10 @@ namespace MagieApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //int width = Int32.Parse(Console.ReadLine());
+            Game game = new Game(4);
+
+            game.StartGame();
         }
     }
 }

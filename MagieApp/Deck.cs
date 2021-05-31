@@ -9,12 +9,35 @@ namespace MagieApp
     {
         private Random random;
 
-        public Deck(List<Card> cards)
+        public Deck()
         {
-            DeckList = cards;
         }
 
         public List<Card> DeckList { get; set; }
+
+        public List<Card> ClearTable(List<Row> rows, int chosenRow)
+        {
+            MarkCards(rows, chosenRow);
+            List<Card> ShuffledCards = new List<Card>();
+
+            foreach (Row row in rows)
+            {
+                foreach (var card in row.Cards)
+                {
+                    ShuffledCards.Add(card);
+                }
+                row.Cards.Clear();
+            }
+            return Shuffle(ShuffledCards);
+        }
+
+        private void MarkCards(List<Row> rows, int chosenRow)
+        {
+            foreach (Card card in rows[chosenRow].Cards)
+            {
+                card.MarkCard();
+            }
+        }
 
         public List<Card> FirstHandout()
         {
@@ -27,6 +50,12 @@ namespace MagieApp
             }
 
             return FirstHandoutList;
+        }
+
+        public List<Card> SecondHandout(List<Card> cards)
+        {
+            List<Card> SecondHandout = Shuffle(cards);
+            return SecondHandout;
         }
 
         public List<Card> Shuffle(List<Card> OldList)
@@ -46,7 +75,6 @@ namespace MagieApp
             OldList.Sort(delegate (Card x, Card y) {
                 return x.Marked.CompareTo(y.Marked);
             });
-
             return OldList;
         }
     }

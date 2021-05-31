@@ -4,11 +4,14 @@ using System.Text;
 
 namespace MagieApp
 {
-    class Row
+    public class Row
     {
+        public List<Card> Cards { get; set; }
         public Row()
         {
-            Cards = new List<Container>();
+            Cards = new List<Card>();
         }
+
+        //List<Card> Cards = new List<Card>();
     }
 }
