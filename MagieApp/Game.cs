@@ -7,6 +7,7 @@ namespace MagieApp
     public class Game
     {
         public List<Row> Rows { get; private set; }
+        public int Width { get; set; }
 
         public Game(int width)
         {
@@ -24,7 +25,7 @@ namespace MagieApp
             List<Card> FirstHandoutCards = deck.FirstHandout();
             if (HandoutCards(FirstHandoutCards))
             {
-                PrintGrid(Rows);
+                PrintGrid(Rows, true);
             }
             Console.WriteLine("In which row is your card:");
             int chosenRow = Int32.Parse(Console.ReadLine()) - 1;
@@ -33,18 +34,12 @@ namespace MagieApp
             Console.WriteLine("vvvv");
             if (HandoutCards(ShuffledCards))
             {
-                PrintGrid(Rows);
+                PrintGrid(Rows, false);
             }
+            int chosenColumn = Int32.Parse(Console.ReadLine()) - 1;
+            string answer = deck.GetAnswer(Rows, chosenColumn);
+            Console.WriteLine("The card you chose was: " + answer);
         }
-
-        //private bool MarkCards2(int chosenRow)
-        //{
-        //    foreach(Card card in Rows[chosenRow].Cards)
-        //    {
-        //        card.MarkCard(chosenRow);
-        //    }
-        //    return true;
-        //}
 
         private bool HandoutCards(List<Card> cards)
         {
@@ -60,7 +55,7 @@ namespace MagieApp
             return true;
         }
 
-        public void PrintGrid(List<Row> rows)
+        public void PrintGrid(List<Row> rows, bool displayRowNumber)
         {
             int rowNumber = 1;
             foreach (Row row in rows)
@@ -70,12 +65,18 @@ namespace MagieApp
                 {
                     print += card.Value;
                 }
-                Console.WriteLine(rowNumber + ": " + print);
+                if (displayRowNumber == true)
+                {
+                    Console.WriteLine(rowNumber + ": " + print);
+                } 
+                else
+                {
+                    Console.WriteLine(print);
+                }
                 rowNumber++;
             }
         }
 
-        public int Width { get; set; }
 
 
     }

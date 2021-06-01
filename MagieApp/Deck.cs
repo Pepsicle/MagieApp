@@ -77,5 +77,19 @@ namespace MagieApp
             });
             return OldList;
         }
+
+        public string GetAnswer(List<Row> rows, int chosenColumn)
+        {
+            foreach (Row row in rows)
+            {
+                if (row.Cards[chosenColumn].Marked == true)
+                {
+                    {
+                        return row.Cards[chosenColumn].Value.ToString();
+                    }
+                }
+            }
+            return "There was a problem";
+        }
     }
 }
