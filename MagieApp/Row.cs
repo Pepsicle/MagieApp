@@ -11,7 +11,5 @@ namespace MagieApp
         {
             Cards = new List<Card>();
         }
-
-        //List<Card> Cards = new List<Card>();
     }
 }

@@ -88,6 +88,10 @@ namespace MagieApp
                         return row.Cards[chosenColumn].Value.ToString();
                     }
                 }
+                else if (!row.Cards[chosenColumn].Marked == false)
+                {
+                    return "There was a problem";
+                }
             }
             return "There was a problem";
         }

@@ -27,17 +27,25 @@ namespace MagieApp
             {
                 PrintGrid(Rows, true);
             }
+            Console.WriteLine("");
             Console.WriteLine("In which row is your card:");
+            Console.WriteLine("");
             int chosenRow = Int32.Parse(Console.ReadLine()) - 1;
             List<Card> ShuffledCards = deck.ClearTable(Rows, chosenRow);
+            Console.WriteLine("");
             Console.WriteLine("1234");
             Console.WriteLine("vvvv");
+            Console.WriteLine("");
             if (HandoutCards(ShuffledCards))
             {
                 PrintGrid(Rows, false);
             }
+            Console.WriteLine("");
+            Console.WriteLine("In which column is your card?");
+            Console.WriteLine("");
             int chosenColumn = Int32.Parse(Console.ReadLine()) - 1;
             string answer = deck.GetAnswer(Rows, chosenColumn);
+            Console.WriteLine("");
             Console.WriteLine("The card you chose was: " + answer);
         }
 
