@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagieApp", "MagieApp\MagieApp.csproj", "{76B6A701-E6A6-4A18-9F20-BCF6570D5D98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagieApp", "MagieApp\MagieApp.csproj", "{76B6A701-E6A6-4A18-9F20-BCF6570D5D98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagieAppTests", "MagieAppTests\MagieAppTests.csproj", "{A56E0E8A-60A0-4D9C-919B-EF894F46F47A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{76B6A701-E6A6-4A18-9F20-BCF6570D5D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76B6A701-E6A6-4A18-9F20-BCF6570D5D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76B6A701-E6A6-4A18-9F20-BCF6570D5D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A56E0E8A-60A0-4D9C-919B-EF894F46F47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A56E0E8A-60A0-4D9C-919B-EF894F46F47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A56E0E8A-60A0-4D9C-919B-EF894F46F47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A56E0E8A-60A0-4D9C-919B-EF894F46F47A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

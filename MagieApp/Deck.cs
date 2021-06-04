@@ -5,7 +5,7 @@ using CardValues = MagieApp.CardValues.Values;
 
 namespace MagieApp
 {
-    class Deck
+    public class Deck
     {
         private Random random;
 
@@ -88,7 +88,7 @@ namespace MagieApp
                         return row.Cards[chosenColumn].Value.ToString();
                     }
                 }
-                else if (!row.Cards[chosenColumn].Marked == false)
+                else if (!row.Cards[chosenColumn].Marked == true)
                 {
                     return "There was a problem";
                 }
